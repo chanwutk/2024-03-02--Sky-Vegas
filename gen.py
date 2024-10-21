@@ -36,7 +36,7 @@ def page(repo: str, number: int, fr: int, to: int):
 <body>
   <div class="navigation-container">
     {f'<a href="http://chanwutk.github.io/{repo}/{(_number-1):02d}" class="p-btn">prev</a>' if number > fr else ''}
-    <a href="http://chanwutk.github.io/{repo}/{(_number+1):02d}" class="n-btn">next</a>
+    {f'<a href="http://chanwutk.github.io/{repo}/{(_number+1):02d}" class="p-btn">next</a>' if number < to else ''}
   </div>
   Click to view the full-size image.
   <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
@@ -52,7 +52,7 @@ def page(repo: str, number: int, fr: int, to: int):
     <a class="a-img" href="https://github.com/chanwutk/{repo}/blob/main/FILM%20-%20{'' if number == 0 else number}9.jpeg"><img src="https://github.com/chanwutk/{repo}/blob/main/SMALL-FILM%20-%20{'' if number == 0 else number}9.jpeg?raw=true" width=100% height=auto alt=""></a>
   </div>
   <div class="navigation-container">
-    <a href="http://chanwutk.github.io/{repo}/{(_number-1):02d}" class="p-btn">prev</a>
+    {f'<a href="http://chanwutk.github.io/{repo}/{(_number-1):02d}" class="p-btn">prev</a>' if number > fr else ''}
     {f'<a href="http://chanwutk.github.io/{repo}/{(_number+1):02d}" class="p-btn">next</a>' if number < to else ''}
   </div>
   <div>
