@@ -38,6 +38,7 @@ def page(repo: str, number: int, fr: int, to: int):
     {f'<a href="http://chanwutk.github.io/{repo}/{(_number-1):02d}" class="p-btn">prev</a>' if number > fr else ''}
     <a href="http://chanwutk.github.io/{repo}/{(_number+1):02d}" class="n-btn">next</a>
   </div>
+  Click to view the full-size image.
   <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
     <a class="a-img" href="https://github.com/chanwutk/{repo}/blob/main/FILM - {'' if number == 0 else number}0.JPG"><img src="https://github.com/chanwutk/{repo}/blob/main/SMALL-FILM - {'' if number == 0 else number}0.JPG?raw=true" width=100% height=auto alt=""></a>
     <a class="a-img" href="https://github.com/chanwutk/{repo}/blob/main/FILM - {'' if number == 0 else number}1.JPG"><img src="https://github.com/chanwutk/{repo}/blob/main/SMALL-FILM - {'' if number == 0 else number}1.JPG?raw=true" width=100% height=auto alt=""></a>
